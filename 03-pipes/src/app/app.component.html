@@ -1,0 +1,58 @@
+<h1 class="mt-3">Pippes <small>Angular</small></h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+
+        <table class="table">
+            <thead class="thead-dark">
+
+                <tr>
+                    <th> Variable </th>
+                    <th> Pippes </th>
+                    <th> Salida </th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th> {{ nombre }} </th>
+                    <th> uppercase </th>
+                    <th> {{ nombre | uppercase}} </th>
+                </tr>
+
+                <tr>
+                    <th> {{ nombre }} </th>
+                    <th> lowercase </th>
+                    <th> {{ nombre | lowercase }} </th>
+                </tr>
+
+                <tr>
+                    <th> {{ nombre }} </th>
+                    <th> slice:3 </th>
+                    <th> {{ nombre | slice:3 }} </th>
+                </tr>
+
+                <tr>
+                    <th> {{ nombre }} </th>
+                    <th> slice:0:4 </th>
+                    <th> {{ nombre | slice:0:4 }} </th>
+                </tr>
+
+                <tr>
+                    <th> {{ PI }} </th>
+                    <th> number:'3.0-0' </th>
+                    <th> {{ PI | number:'3.0-0' }} </th>
+                </tr>
+                <tr>
+                    <th> {{ PI }} </th>
+                    <th> number:'.0-2' </th>
+                    <th> {{ PI | number:'.0-2' }} </th>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
