@@ -50,9 +50,77 @@
                     <th> number:'.0-2' </th>
                     <th> {{ PI | number:'.0-2' }} </th>
                 </tr>
+                <tr>
+                    <th> {{ porcentaje }} </th>
+                    <th> percent </th>
+                    <th> {{ porcentaje | percent }} </th>
+                </tr>
+                <tr>
+                    <th> {{ porcentaje }} </th>
+                    <th> percent: 2.2-2 </th>
+                    <th> {{ porcentaje | percent:'2.2-2' }} </th>
+                </tr>
+                <tr>
+                    <th> {{ salario }} </th>
+                    <th> Currency </th>
+                    <th> {{ salario | currency }} </th>
+                </tr>
+                <tr>
+                    <th> {{ salario }} </th>
+                    <th> Currency:'CLP ':'symbol':'.0-0' </th>
+                    <th> {{ salario | currency:'CLP ':'symbol':'.0-0' }} </th>
+                </tr>
+                <tr>
+                    <th> {{ valorPromesa }} </th>
+                    <th> asycn </th>
+                    <th> {{ valorPromesa | async }} </th>
+                </tr>
+                <tr>
+                    <th> {{ fecha }} </th>
+                    <th> date </th>
+                    <th> {{ fecha | date }} </th>
+                </tr>
+                <tr>
+                    <th> {{ fecha }} </th>
+                    <th> date: fullDate </th>
+                    <th> {{ fecha | date:'fullDate' }} </th>
+                </tr>
+                <tr>
+                    <th> {{ fecha }} </th>
+                    <th> date: short </th>
+                    <th> {{ fecha | date:'short' }} </th>
+                </tr>
+                <tr>
+                    <th> {{ fecha }} </th>
+                    <th> date: MMMM - dd </th>
+                    <th> {{ fecha | date:'MMMM - dd' }} </th>
+                </tr>
+                <tr>
+                    <th> {{ fecha }} </th>
+                    <th>
+                        date:'EEEE dd, MMMM':'':'{{ idioma}}'
+                        <br>
+                        <button (click)="idioma='es'" class="mr-1 btn btn-primary">Español</button>
+                        <button (click)="idioma='en'" class="mr-1 btn btn-secondary">Inglés</button>
+                        <button (click)="idioma='fr'" class="mr-1 btn btn-success">Francés</button>
+                    </th>
+                    <th> {{ fecha | date:'EEEE dd, MMMM':'':idioma }} </th>
+                </tr>
 
             </tbody>
         </table>
+
+        <h3 class="mt-5">JSON</h3>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+
+                <pre>
+                    {{ heroe | json }}
+                </pre>
+
+            </div>
+        </div>
 
     </div>
 </div>
