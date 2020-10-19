@@ -43,7 +43,7 @@
                     <th>{{track.name}}</th>
                     <th>{{track.album.name}}</th>
                     <th>
-                        <audio [src]="track.preview_url" controls></audio>
+                        <iframe [src]="track.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </th>
                 </tr>
             </tbody>
