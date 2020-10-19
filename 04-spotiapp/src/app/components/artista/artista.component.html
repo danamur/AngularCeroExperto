@@ -22,3 +22,32 @@
 
     </div>
 </div>
+
+<div class="row mt-5">
+    <div class="col">
+
+        <table class="table">
+            <thead>
+                <tr class="text-light">
+                    <th>Foto</th>
+                    <th>Canción</th>
+                    <th>Album</th>
+                    <th>Vista Previa</th>
+                </tr>
+            </thead>
+            <tbody class="text-light">
+                <tr *ngFor="let track of topTracks">
+                    <th>
+                        <img [src]="track.album.images | noimage " class="img-thumb">
+                    </th>
+                    <th>{{track.name}}</th>
+                    <th>{{track.album.name}}</th>
+                    <th>
+                        <audio [src]="track.preview_url" controls></audio>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
