@@ -1,4 +1,4 @@
-<ion-header [translucent]="true" class="ion-no-border">
+<ion-header class="ion-no-border">
     <ion-toolbar color="dark">
         <ion-title>
             Pendientes
@@ -8,13 +8,8 @@
 
 <ion-content [fullscreen]="true" color="dark">
 
-    <ion-list color="dark">
+    <app-listas [terminada]="false"></app-listas>
 
-        <ion-item *ngFor="let lista of deseosService.lista" detail color="dark">
-            <ion-label> {{ lista.titulo }} </ion-label>
-        </ion-item>
-
-    </ion-list>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button color="tertiary" (click)="agregarLista()">
