@@ -1,0 +1,6 @@
+<div [ngClass]="alerta" class="alert" role="alert">
+    <strong>Well done!</strong> You successfully read this important alert message.
+</div>
+
+<button type="button" class="btn btn-outline-primary" (click)="alerta = 'alert-primary'">Primary</button>
+<button type="button" class="btn btn-outline-danger" (click)="alerta = 'alert-danger'">Danger</button>
