@@ -4,3 +4,13 @@
 
 <button type="button" class="btn btn-outline-primary" (click)="alerta = 'alert-primary'">Primary</button>
 <button type="button" class="btn btn-outline-danger" (click)="alerta = 'alert-danger'">Danger</button>
+
+<br><br>
+
+<h3>Proceso Asincrono</h3>
+
+<button (click)="ejecutar()" class="btn btn-outline-success" type="button" name="button" [disabled]="loading">
+    <i [ngClass]="{ 'fa-save' : !loading, 'fa-refresh fa-spin': loading }" class="fa"></i>
+    <span *ngIf="!loading">Guardar cambios</span>
+    <span *ngIf="loading">Espere por favor...</span>
+</button>
